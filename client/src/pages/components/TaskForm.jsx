@@ -11,10 +11,11 @@ export default function TaskForm({ onAdd }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault(); if (!title.trim()) {
-    toast.error("Please enter a task title");
-    return;
-  }
+    e.preventDefault();
+    if (!title.trim()) {
+      toast.error("Please enter a task title");
+      return;
+    }
     onAdd({ title, priority, dueDate });
     setTitle("");
     setPriority("Low");
@@ -39,13 +40,13 @@ export default function TaskForm({ onAdd }) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-black/60  flex justify-center items-center z-50"
+            className="fixed inset-0 bg-black/60 flex justify-center items-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="relative bg-white"
+              className="relative bg-white w-150"
               initial={{ scale: 0.8, y: 30, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.8, y: 30, opacity: 0 }}
@@ -55,57 +56,78 @@ export default function TaskForm({ onAdd }) {
                 onClick={() => setIsOpen(false)}
                 className="absolute top-2 right-2 text-gray-500 hover:text-red-600"
               >
-                <MdOutlineCancel size={25}/>
+                <MdOutlineCancel size={25} />
               </button>
               <form
                 onSubmit={handleSubmit}
                 className=" bg-white shadow p-8 rounded mb-6"
               >
-                <div className="mb-5 border-b">
-                  <h1 className="font-bold text-xl mb-4 flex justify-center">
-                    Create Task
-                  </h1>
+                {/* <div className="mb-5 border-b"> */}
+                <h1 className="font-bold text-xl mb-4 flex justify-center border-b">
+                  Create Task
+                </h1>
+                {/* </div> */}
+                <div>
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-2"
+                  >
+                    Title
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter the Title of your Task"
+                    name="title"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-2"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    required
+                  />
                 </div>
-                <input
-                  type="text"
-                  placeholder="Title"
-                  name="title"
-                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-2"
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
-                  required
-                />
-                <select
-                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-2"
-                  value={priority}
-                  onChange={(e) => setPriority(e.target.value)}
-                >
-                  <option value="Low">Low</option>
-                  <option value="Medium">Medium</option>
-                  <option value="High">High</option>
-                </select>
-                <input
-                  type="date"
-                  placeholder="Due Date"
-                  className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-2"
-                  value={dueDate}
-                  onChange={(e) => setDueDate(e.target.value)}
-                />
+                <div >
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-2"
+                  >
+                    Priority
+                  </label>
+                  <select
+                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-2"
+                    value={priority}
+                    onChange={(e) => setPriority(e.target.value)}
+                  >
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-2"
+                  >
+                    Due Date
+                  </label>
+                  <input
+                    type="date"
+                    placeholder="Due Date"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-2"
+                    value={dueDate}
+                    onChange={(e) => setDueDate(e.target.value)}
+                  />
+                </div>
               </form>
               <div className="mt-2 flex px-5 pb-2 justify-between">
-                  <button
-                    onClick={handleSubmit}
-                    className="bg-red-500 text-white px-4 py-2 rounded"
-                  >
-                    Add Task
-                  </button>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="bg-red-500 text-white px-4 py-2 rounded"
-                  >
-                    Cancel
-                  </button>
-                </div>
+                <button
+                  onClick={handleSubmit}
+                  className="bg-red-500 text-white px-4 py-2 rounded"
+                >
+                  Add Task
+                </button>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="bg-red-500 text-white px-4 py-2 rounded"
+                >
+                  Cancel
+                </button>
+              </div>
             </motion.div>
           </motion.div>
         )}
