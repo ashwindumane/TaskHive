@@ -44,7 +44,7 @@ const Dashboard = () => {
     setLoading(true);
     setTimeout(async() =>{
     try {
-      const res = await axios.get("http://localhost:5000/api/tasks", {
+      const res = await axios.get("https://taskverse-cy53.onrender.com/api/tasks", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setTasks(Array.isArray(res.data) ? res.data : []);
@@ -60,7 +60,7 @@ const Dashboard = () => {
   const handleCreate = async (task) => {
     if (!task.title.trim()) return;
     try {
-      const res = await axios.post("http://localhost:5000/api/tasks", task, {
+      const res = await axios.post("https://taskverse-cy53.onrender.com/api/tasks", task, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setTasks([...tasks, res.data]);
@@ -71,7 +71,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${id}`, {
+      await axios.delete(`https://taskverse-cy53.onrender.com/api/tasks/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setTasks(tasks.filter((t) => t._id !== id));
@@ -83,7 +83,7 @@ const Dashboard = () => {
   const handleUpdate = async (id) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://taskverse-cy53.onrender.com/api/tasks/${id}`,
         editTask,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -99,7 +99,7 @@ const Dashboard = () => {
   const handleComplete = async (id, completed) => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://taskverse-cy53.onrender.com/api/tasks/${id}`,
         { completed: !completed },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

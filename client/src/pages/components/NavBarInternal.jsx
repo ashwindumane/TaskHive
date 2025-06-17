@@ -91,7 +91,6 @@ const NavbarInternal = () => {
                     onClick={() => {
                       navigate("/profile")
                       setDropdownOpen(false);
-                      // alert("Profile page is under construction");
                     }}
                     className="flex items-center gap-2 px-4 py-2 hover:bg-red-100"
                   >
