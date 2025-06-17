@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://yourfrontenddomain.com'], 
+  origin: ['http://localhost:5173', 'https://vercel.com/nayan1509s-projects/taskverse/DaTkEXNDhAAw4NeyHcg8M4mCGoc1'], 
   credentials: true,
 }));
 app.use(express.json());

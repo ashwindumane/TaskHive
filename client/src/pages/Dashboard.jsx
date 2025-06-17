@@ -299,7 +299,7 @@ const Dashboard = () => {
     <motion.div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-red-100 p-5">
       {loading && <Loader />}
       <div className="grid md:grid-flow-col grid-cols-1 md:grid-cols-5 gap-6">
-        <div className="flex flex-col md:border-e-2 p-4 justify-between">
+        <div className="md:min-h-[650px] flex flex-col md:border-e-2 p-4 justify-between">
           <div className="flex flex-col items-center">
             <h2 className="text-xl font-bold mb-4 text-center md:text-left">
               Welcome, {user?.firstName}!
