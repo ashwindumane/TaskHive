@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://vercel.com/nayan1509s-projects/taskverse/DaTkEXNDhAAw4NeyHcg8M4mCGoc1'], 
+  origin: ['http://localhost:5173', 'https://taskverse-phi.vercel.app/'], 
   credentials: true,
 }));
 app.use(express.json());
