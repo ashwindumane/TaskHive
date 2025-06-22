@@ -166,7 +166,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="py-8 text-center bg-gray-100 text-gray-600">
-        <p>&copy; {new Date().getFullYear()} Taskverse. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Taskverse. All rights reserved. Developer - Anunay Nayan</p>
       </footer>
     </div>
   );
