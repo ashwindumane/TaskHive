@@ -107,7 +107,7 @@ const LoginPage = () => {
                 setError("Guest login failed. Please try again.");
               }
             }}
-            className="mt-4 w-full bg-red-500 hover:bg-red-700 text-white p-2 rounded-md text-sm"
+            className="mt-4 w-full text-red-500 hover:underline font-medium p-2 rounded-md text-sm"
           >
             Continue as Guest
           </button>
