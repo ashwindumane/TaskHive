@@ -92,6 +92,25 @@ const LoginPage = () => {
           >
             Register here
           </button>
+          <button
+            onClick={async () => {
+              try {
+                const res = await loginUser({
+                  email: "guest@taskverse.com",
+                  password: "guest123",
+                });
+                localStorage.setItem("token", res.data.token);
+                localStorage.setItem("user", JSON.stringify(res.data.user));
+                login(res.data);
+                navigate("/dashboard");
+              } catch (err) {
+                setError("Guest login failed. Please try again.");
+              }
+            }}
+            className="mt-4 w-full bg-red-500 hover:bg-red-700 text-white p-2 rounded-md text-sm"
+          >
+            Continue as Guest
+          </button>
         </div>
       </div>
     </motion.div>
