@@ -13,7 +13,7 @@ const NavbarLanding = () => {
         
         <Link to="/" className="flex items-center  ">
         <img src={logo} className="w-12 h-12 object-contain"/>
-          <span className="text-white text-2xl font-bold">Taskverse</span>
+          <span className="text-white text-2xl font-bold">TaskHive</span>
         </Link>
 
         {/* Hamburger Button for Small Screens */}

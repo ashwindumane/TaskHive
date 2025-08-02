@@ -21,7 +21,7 @@ export default function LandingPage() {
           >
             <motion.img className="w-15 h-15" src={logo} />
             <h1 className="text-4xl sm:text-5xl font-extrabold text-red-500 mb-4 font-serif">
-              Taskverse
+              TaskHive
             </h1>
           </motion.div>
           <motion.p
@@ -142,7 +142,7 @@ export default function LandingPage() {
             transition={{ duration: 0.5 }}
           >
             <h4 className="text-lg font-semibold text-red-500">
-              Is Taskverse free to use?
+              Is TaskHive free to use?
             </h4>
             <p className="text-gray-700">
               Yes, it's completely free for all users.
@@ -155,7 +155,7 @@ export default function LandingPage() {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <h4 className="text-lg font-semibold text-red-500">
-              Can I use Taskverse on mobile?
+              Can I use TaskHive on mobile?
             </h4>
             <p className="text-gray-700">
               Yes, the UI is responsive and works great on all devices.
@@ -166,7 +166,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="py-8 text-center bg-gray-100 text-gray-600">
-        <p>&copy; {new Date().getFullYear()} Taskverse. All rights reserved. Developer - Anunay Nayan</p>
+        <p>&copy; {new Date().getFullYear()} TaskHive. All rights reserved. Developer -Ashwin Dumane</p>
       </footer>
     </div>
   );

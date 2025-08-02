@@ -39,7 +39,7 @@ const NavbarInternal = () => {
         <Link to="/" className="text-2xl font-bold text-white flex items-center">
         <img src={Logo} alt="logo" className="w-10" />
 
-          <span>Taskverse</span>
+          <span>TaskHive</span>
         </Link>
 
         <button

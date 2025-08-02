@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "../../App.css";
 
 const reviews = [
-  { name: "Alice", text: "Taskverse changed how I manage my tasks!" },
+  { name: "Alice", text: "TaskHive changed how I manage my tasks!" },
   { name: "Bob", text: "So intuitive and clean. Love the design!" },
   { name: "Charlie", text: "Helped me meet my deadlines efficiently." },
   { name: "Diana", text: "Fast and secure. Just what I needed." },
@@ -12,7 +12,7 @@ const reviews = [
   { name: "George", text: "Highly recommend to anyone managing projects." },
   { name: "Hannah", text: "It simplified my daily to-dos!" },
   { name: "Ishan", text: "Feature-rich but simple. Excellent!" },
-  { name: "Jade", text: "I’ve become more productive thanks to Taskverse." },
+  { name: "Jade", text: "I’ve become more productive thanks to TaskHive." },
   { name: "Kunal", text: "Love how everything is organized." },
   { name: "Laura", text: "Tasks are now fun to complete!" },
   { name: "Manuel", text: "Great tool for remote teams too." },
